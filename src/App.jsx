@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SurveyForm from "./components/SurveyForm";
 import WelcomeScreen from "./components/WelcomeScreen";
-import "./styles.css"; // Import the custom CSS
+import "./styles.css"; 
 
 
 function App() {

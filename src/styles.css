@@ -1,16 +1,15 @@
-/* General styles */
+
 .app-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: #dbf1fe;
-  perspective: 1000px; /* Added for 3D effect */
-  padding: 1rem; /* Added padding for responsiveness */
-  box-sizing: border-box; /* Ensure padding is included in the height */
+  perspective: 1000px; 
+  padding: 1rem; 
+  box-sizing: border-box; 
 }
 
-/* Welcome screen styles */
 .welcome-screen {
   background-color: #ffffff;
   padding: 2rem;
@@ -19,8 +18,8 @@
   box-shadow: 0 4px 40px rgba(21, 1, 65, 0.1);
   text-align: center;
   transform: rotateY(0deg);
-  animation: slideIn 1s ease-out; /* Animation for the welcome screen */
-  max-width: 90%; /* Ensure it fits well on smaller screens */
+  animation: slideIn 1s ease-out;
+  max-width: 90%; 
   margin: auto;
 }
 
@@ -49,14 +48,14 @@
 
 .start-button:hover {
   background-color: #073050;
-  transform: scale(1.1); /* Scale up on hover */
+  transform: scale(1.1); 
 }
 
 .start-button:active {
-  transform: scale(0.9); /* Scale down on click */
+  transform: scale(0.9); 
 }
 
-/* Survey form styles */
+
 .survey-form {
   background-color: #ffffff;
   padding: 2rem;
@@ -65,7 +64,7 @@
   width: 100%;
   max-width: 600px;
   transform: rotateY(0deg);
-  animation: slideIn 1s ease-out; /* Animation for the survey form */
+  animation: slideIn 1s ease-out; 
   margin: auto;
 }
 
@@ -82,7 +81,7 @@
 .rating-options {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+  flex-wrap: wrap; 
 }
 
 .rating-button {
@@ -96,19 +95,19 @@
   transform-style: preserve-3d;
   perspective: 1000px;
   color:  #07446f;
-  margin: 0.25rem; /* Added margin for better spacing */
+  margin: 0.25rem;
 }
 
 .rating-button:hover {
   background-color: #063466;
   color: white;
-  transform: rotateY(15deg); /* 3D rotation effect on hover */
+  transform: rotateY(15deg); 
 }
 
 .rating-button.selected {
   background-color: #053d54;
   color: white;
-  transform: rotateY(0deg); /* Remove 3D rotation when selected */
+  transform: rotateY(0deg); 
 }
 
 .feedback-text {
@@ -118,12 +117,12 @@
   border-radius: 8px;
   resize: none;
   transition: box-shadow 0.3s, transform 0.3s;
-  box-sizing: border-box; /* Ensure padding is included in width */
+  box-sizing: border-box; 
 }
 
 .feedback-text:focus {
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Box-shadow effect on focus */
-  transform: scale(1.02); /* Slight scale up on focus */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); 
+  transform: scale(1.02);
 }
 
 .navigation-buttons {
@@ -149,7 +148,7 @@
 }
 
 .nav-button:hover:not(:disabled) {
-  transform: translateY(-3px); /* Lift button on hover */
+  transform: translateY(-3px);
 }
 
 .submit-button {
@@ -165,14 +164,13 @@
 
 .submit-button:hover {
   transform: translateY(-3px);
-  background-color: #0fa5db; /* Lift button on hover */
+  background-color: #0fa5db; 
 }
 
 .submit-button:active {
-  transform: scale(0.95); /* Scale down on click */
+  transform: scale(0.95); 
 }
 
-/* Confirmation screen styles */
 .confirmation-screen {
   background-color: #ffffff;
   padding: 2rem;
@@ -180,8 +178,8 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   transform: rotateY(0deg);
-  animation: slideIn 1s ease-out; /* Animation for confirmation screen */
-  max-width: 90%; /* Ensure it fits well on smaller screens */
+  animation: slideIn 1s ease-out; 
+  max-width: 90%; 
   margin: auto;
 }
 
@@ -196,7 +194,7 @@
   color:#053d54;
 }
 
-/* Animations */
+
 @keyframes slideIn {
   from {
     transform: rotateY(-90deg);
@@ -208,7 +206,7 @@
   }
 }
 
-/* Media queries for responsiveness */
+
 @media (max-width: 768px) {
   .survey-form,
   .welcome-screen,
