@@ -1,0 +1,244 @@
+/* General styles */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #dbf1fe;
+  perspective: 1000px; /* Added for 3D effect */
+  padding: 1rem; /* Added padding for responsiveness */
+  box-sizing: border-box; /* Ensure padding is included in the height */
+}
+
+/* Welcome screen styles */
+.welcome-screen {
+  background-color: #ffffff;
+  padding: 2rem;
+
+  border-radius: 12px;
+  box-shadow: 0 4px 40px rgba(21, 1, 65, 0.1);
+  text-align: center;
+  transform: rotateY(0deg);
+  animation: slideIn 1s ease-out; /* Animation for the welcome screen */
+  max-width: 90%; /* Ensure it fits well on smaller screens */
+  margin: auto;
+}
+
+.welcome-title {
+  font-size: 2rem;
+  color: #22567d;
+  margin-bottom: 1rem;
+}
+
+.welcome-text {
+  font-size: 1rem;
+  color: #22567d;
+  margin-bottom: 2rem;
+}
+
+.start-button {
+  background-color: #053d54;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.start-button:hover {
+  background-color: #073050;
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.start-button:active {
+  transform: scale(0.9); /* Scale down on click */
+}
+
+/* Survey form styles */
+.survey-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 40px rgba(1, 2, 40, 0.1);
+  width: 100%;
+  max-width: 600px;
+  transform: rotateY(0deg);
+  animation: slideIn 1s ease-out; /* Animation for the survey form */
+  margin: auto;
+}
+
+.survey-question {
+  margin-bottom: 1.5rem;
+}
+
+.question-text {
+  font-size: 1.24rem;
+  margin-bottom: 1rem;
+  color: #07446f;
+}
+
+.rating-options {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+}
+
+.rating-button {
+  background-color: #d7d7d7;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  color:  #07446f;
+  margin: 0.25rem; /* Added margin for better spacing */
+}
+
+.rating-button:hover {
+  background-color: #063466;
+  color: white;
+  transform: rotateY(15deg); /* 3D rotation effect on hover */
+}
+
+.rating-button.selected {
+  background-color: #053d54;
+  color: white;
+  transform: rotateY(0deg); /* Remove 3D rotation when selected */
+}
+
+.feedback-text {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.feedback-text:focus {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Box-shadow effect on focus */
+  transform: scale(1.02); /* Slight scale up on focus */
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.nav-button {
+  background-color: #053d54;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.nav-button:hover:not(:disabled) {
+  transform: translateY(-3px); /* Lift button on hover */
+}
+
+.submit-button {
+  background-color: #9de9fe;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
+  background-color: #0fa5db; /* Lift button on hover */
+}
+
+.submit-button:active {
+  transform: scale(0.95); /* Scale down on click */
+}
+
+/* Confirmation screen styles */
+.confirmation-screen {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transform: rotateY(0deg);
+  animation: slideIn 1s ease-out; /* Animation for confirmation screen */
+  max-width: 90%; /* Ensure it fits well on smaller screens */
+  margin: auto;
+}
+
+.confirmation-title {
+  font-size: 2rem;
+  color: #053d54;
+  margin-bottom: 1rem;
+}
+
+.confirmation-text {
+  font-size: 1rem;
+  color:#053d54;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .survey-form,
+  .welcome-screen,
+  .confirmation-screen {
+    padding: 1rem;
+  }
+
+  .question-text {
+    font-size: 1rem;
+  }
+
+  .rating-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .feedback-text {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-button,
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+}
